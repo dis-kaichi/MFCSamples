@@ -24,7 +24,9 @@ CMFCSamplesDlg::CMFCSamplesDlg(CWnd* pParent /*=NULL*/)
 
 void CMFCSamplesDlg::DoDataExchange(CDataExchange* pDX)
 {
-	CDialogEx::DoDataExchange(pDX);
+    CDialogEx::DoDataExchange(pDX);
+    // イベントその他もろもろを各インスタンスに任せる
+    DDX_Control(pDX, IDC_MFCBUTTON1, m_driverButton);
 }
 
 BEGIN_MESSAGE_MAP(CMFCSamplesDlg, CDialogEx)
@@ -45,6 +47,9 @@ BOOL CMFCSamplesDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 小さいアイコンの設定
 
 	// TODO: 初期化をここに追加します。
+    CButton button;
+    CRect rect1(49, 0, 100, 50);
+    button.Create(_T("BUTTON"), BS_PUSHBUTTON | WS_VISIBLE, rect1, this, 2000);
 
 	return TRUE;  // フォーカスをコントロールに設定した場合を除き、TRUE を返します。
 }
@@ -84,4 +89,3 @@ HCURSOR CMFCSamplesDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
 }
-

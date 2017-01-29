@@ -75,6 +75,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Team Tools\Static Analysis Tools\Rule Sets\NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -92,6 +94,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <EnablePREfast>true</EnablePREfast>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -185,13 +188,19 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ButtonDialog.h" />
+    <ClInclude Include="Defines.h" />
+    <ClInclude Include="DriverButton.h" />
     <ClInclude Include="MFCSamples.h" />
     <ClInclude Include="MFCSamplesDlg.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="ResourceForBitmap.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ButtonDialog.cpp" />
+    <ClCompile Include="DriverButton.cpp" />
     <ClCompile Include="MFCSamples.cpp" />
     <ClCompile Include="MFCSamplesDlg.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -203,14 +212,21 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MFCSamples.rc" />
+    <ResourceCompile Include="ResourceForBitmaps.rc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="res\MFCSamples.rc2" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\MFCSamples.ico" />
+    <Image Include="res\yoshihiro.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="MFCSamples.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

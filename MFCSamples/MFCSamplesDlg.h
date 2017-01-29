@@ -3,6 +3,8 @@
 //
 
 #pragma once
+#include "afxbutton.h"
+#include "DriverButton.h"
 
 
 // CMFCSamplesDlg ダイアログ
@@ -30,4 +32,6 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+    CDriverButton m_driverButton;
 };

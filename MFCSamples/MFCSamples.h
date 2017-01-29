@@ -9,7 +9,7 @@
 #endif
 
 #include "resource.h"		// メイン シンボル
-
+#include "Defines.h"
 
 // CMFCSamplesApp:
 // このクラスの実装については、MFCSamples.cpp を参照してください。

@@ -48,6 +48,9 @@
     <ClInclude Include="ResourceForBitmap.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="CommonUtility.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MFCSamples.cpp">
@@ -63,6 +66,9 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="ButtonDialog.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonUtility.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -84,6 +90,12 @@
       <Filter>リソース ファイル</Filter>
     </Image>
     <Image Include="res\yoshihiro.bmp">
+      <Filter>リソース ファイル\images</Filter>
+    </Image>
+    <Image Include="res\ikasumi.bmp">
+      <Filter>リソース ファイル\images</Filter>
+    </Image>
+    <Image Include="res\mrks.ico">
       <Filter>リソース ファイル\images</Filter>
     </Image>
   </ItemGroup>

@@ -51,3 +51,6 @@
 #endif
 
 
+
+// My Settings
+#define IDC_BUTTON1         30000

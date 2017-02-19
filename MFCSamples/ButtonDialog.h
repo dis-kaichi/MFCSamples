@@ -1,18 +1,18 @@
 #pragma once
 
 #include "ResourceForBitmap.h"
-
-#define BLOCK_SIZE 20
+#include "UserDialogInterface.h"
 
 // CButtonDialog ダイアログ
 
-class CButtonDialog : public CDialogEx
+class CButtonDialog : public CDialogEx, public UserDialogInterface
 {
 	DECLARE_DYNAMIC(CButtonDialog)
 
 public:
 	CButtonDialog(CWnd* pParent = NULL);   // 標準コンストラクター
 	virtual ~CButtonDialog();
+    virtual void Open();
     //
     void InitButtonSamples();
 
@@ -28,11 +28,11 @@ protected:
 	DECLARE_MESSAGE_MAP()
 
 private:
-    int m_numOfButtons;
+    int m_num_of_buttons;
     CButton **m_buttons;
-    CBitmapButton *m_bitmapButton;
-    CButton m_notifyButton;
-    int m_buttonId;
+    CBitmapButton *m_bitmap_button;
+    CButton m_notify_button;
+    int m_button_id;
     int m_index;
 
     // Button Styles
@@ -77,5 +77,4 @@ private:
     void OnDoubleClicked();
 
     void InitDialog();
-    static CRect CreateBlockRect(int row, int col, int numOfRows, int numOfCols);
 };

@@ -4,8 +4,7 @@
 
 #pragma once
 #include "afxbutton.h"
-#include "DriverButton.h"
-
+#include "ButtonManager.h"
 
 // CMFCSamplesDlg ダイアログ
 class CMFCSamplesDlg : public CDialogEx
@@ -19,19 +18,22 @@ public:
 	enum { IDD = IDD_MFCSAMPLES_DIALOG };
 #endif
 
-	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV サポート
-
-
-// 実装
 protected:
-	HICON m_hIcon;
-
-	// 生成された、メッセージ割り当て関数
-	virtual BOOL OnInitDialog();
+    virtual void DoDataExchange(CDataExchange* pDX);
+    virtual BOOL PreTranslateMessage(MSG *pMsg);
+    virtual BOOL OnInitDialog();
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
-public:
-    CDriverButton m_driverButton;
+
+    HICON m_hIcon;
+    void OnLButtonClicked(UINT nID);
+
+private:
+    CButtonManager m_button_manager;
+    CButton m_button_for_button;
+    CButton m_button_for_edit;
+    bool m_alt_key_pressed;
+
+    bool IsAltKeyPressed();
 };

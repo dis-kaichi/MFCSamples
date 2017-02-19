@@ -53,4 +53,10 @@
 
 
 // My Settings
-#define IDC_BUTTON1         30000
+#define IDC_USER_BASE                   30000
+#define IDC_MFC_DRIVER_BUTTON1          (IDC_USER_BASE+1)
+#define IDC_MFC_DRIVER_BUTTON2          (IDC_USER_BASE+2)
+#define IDC_MFC_DRIVER_BUTTON3          (IDC_USER_BASE+3)
+#define IDC_MFC_DRIVER_BUTTON4          (IDC_USER_BASE+4)
+#define IDC_MFC_DRIVER_BUTTON100        (IDC_USER_BASE+100)
+#define IDC_BUTTON_SAMPLE1              (IDC_USER_BASE+101)

@@ -189,9 +189,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ButtonDialog.h" />
+    <ClInclude Include="ButtonManager.h" />
     <ClInclude Include="CommonUtility.h" />
     <ClInclude Include="Defines.h" />
-    <ClInclude Include="DriverButton.h" />
+    <ClInclude Include="EditDialog.h" />
+    <ClInclude Include="UserDialogInterface.h" />
     <ClInclude Include="MFCSamples.h" />
     <ClInclude Include="MFCSamplesDlg.h" />
     <ClInclude Include="Resource.h" />
@@ -201,8 +203,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ButtonDialog.cpp" />
+    <ClCompile Include="ButtonManager.cpp" />
     <ClCompile Include="CommonUtility.cpp" />
-    <ClCompile Include="DriverButton.cpp" />
+    <ClCompile Include="EditDialog.cpp" />
     <ClCompile Include="MFCSamples.cpp" />
     <ClCompile Include="MFCSamplesDlg.cpp" />
     <ClCompile Include="stdafx.cpp">
